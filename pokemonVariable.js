@@ -1,0 +1,41 @@
+// First Pokemon
+var aggronHP = 70;
+var aggronHP = aggronHP - 50;
+var aggronNum = 306;
+var aggronCurrentHP = aggronHP;
+var aggronCurrentHPString = "This is Aggron's current HP ";
+var aggronType = "Steel and Rock";
+var aggronBestMove = "Metal Burst";
+var aggronLastEvo = true;
+var aggronAttack = 110;
+var aggronDefense = 180;
+var aggronSpeed = 50;
+var aggronSPAtk = 60;
+var aggronSPDef = 60;
+var aggronDesc = "It claims an entire mountain as its own. The more wounds it has, the more it has battled, so don't take it lightly";
+// Second Pokemon
+var accelgorHP = 80;
+var accelgorHP = accelgorHP - 50;
+var accelgorNum = 617;
+var accelgorType = "Bug";
+var accelgorBestMove = "Final Gambit";
+var accelgorLastEvo = true;
+var accelgorAttack = 70;
+var accelgorDefense = 40;
+var accelgorSpeed = 145;
+var accelgorSpAtk = 100;
+var accelgorSpDef = 60;
+var accelgorDesc = "When its body dries out, it weakens. So it wraps a membrane around itself for protection while it spits poison";
+// Third Pokemon
+var darkraiHP = 70;
+var darkraiHP = darkraiHP - 70;
+var darkraiNum = 491;
+var darkraiType = "Dark";
+var darkraiBestMove = "Dark Pulse";
+var darkraiLastEvo = true;
+var darkraiAttack = 90;
+var darkraiDefense = 90;
+var darkraiSpeed = 125;
+var darkraiSpAtk = 135;
+var darkraiSpDef = 90;
+var darkraiDesc = "To protect itself, it afflicts those around it with nightmares. However, it means no harm.";
