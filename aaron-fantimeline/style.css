@@ -1,0 +1,17 @@
+body {
+    background-color: #c9cacc;
+}
+.right {
+    position: absolute;
+    right: 0px;
+    border: solid 3px gray;
+}
+.left {
+    position: absolute;
+    left: 0px;
+    border: solid 3px gray;
+}
+.audio{
+    position: absolute;
+    left: 0px
+}
