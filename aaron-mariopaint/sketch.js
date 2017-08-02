@@ -4,7 +4,7 @@ function setup(){
 }
 function mouseDragged(){
     fill(random(255),random(255),random(255));
-    ellipse(mouseX, mouseY, random(25), random(25));
+    ellipse(mouseX, mouseY, random(100), random(100));
     rect(mouseX+-40, mouseY+-40, random(20), random(20));
     arc(mouseX+50, mouseY+50, random(60), random(60), PI+QUARTER_PI, 0, CHORD )
 }
