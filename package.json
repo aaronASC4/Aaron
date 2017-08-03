@@ -1,0 +1,23 @@
+{
+  "name": "aaron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aaron.js",
+  "dependencies": {
+    "prompt-sync": "^4.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronASC4/Aaron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronASC4/Aaron/issues"
+  },
+  "homepage": "https://github.com/aaronASC4/Aaron#readme"
+}
