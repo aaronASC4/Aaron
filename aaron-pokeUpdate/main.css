@@ -1,0 +1,17 @@
+#options{
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#rock{
+    width:33%;
+}
+@import url(https://fonts.googleapis.com/css?family=Racing+Sans+One);
+
+body {
+    background: #EEE;
+    }
+    
+.bodywrapper{
+    display: none;
+}

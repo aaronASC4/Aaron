@@ -1,24 +1,63 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <embed height="60" type="audio/mp3" width="144" src="door.mp3" loop="true" autostart="true" />
-         </head>
-    <body> 
-        <div>
-            <div style="background-color: lightblue">
-        <h1>  This is a header. </h1>
+<html>
+<head>
 
-        <p> blah blah blah</p>
-        </div>
+</head>
+<body onload="myFunction()" style="margin:0;">
+<svg version="1.1" x="0px" y="0px"
+viewBox="0 0 163.492 147.116" enable-background="new 0 0 163.492 147.116">
+<path id="face" d="M127.059,70.29c0.268-10.28,0.267-20.006,0.261-22.72l-0.013-0.216c-0.286-10.329-19.152-18.342-43.175-18.279
+c-24.19,0.064-43.223,8.287-43.196,18.72c0.001,0.214-0.009,0.644-0.009,0.644C40.924,49.278,41.1,59.2,41.128,69.894
+c-5.149,0.014-9.892,5.071-9.877,10.611c0.015,5.88,5.641,10.427,10.791,10.413l0.058-0.007c0.242,2.526,0.533,4.488,0.886,5.557
+c2.413,7.327,25.082,27.631,41.222,27.589c16.59-0.044,37.448-20.299,40.288-25.551c0.643-1.189,1.14-4.172,1.525-8.134
+c4.879-0.418,9.409-4.807,9.395-10.14C135.403,75.299,131.507,71.19,127.059,70.29z"/>
+<path id="head" fill="#FFFFFF" d="M54.426,59.6c7.357,3.261,17.94,5.291,29.699,5.26c12.003-0.032,22.764-2.207,30.118-5.626
+c-5.427-4.955-16.742-8.346-29.819-8.312C71.165,50.958,59.735,54.504,54.426,59.6z"/>
+<circle id="ball5" fill="#5E4EFB" cx="108.836" cy="85.622" r="5.59"/>
+<circle id="ball4" fill="#5E4EFB" cx="73.003" cy="85.622" r="5.59"/>
+<circle id="ball3" fill="#5E4EFB" cx="58.791" cy="85.622" r="9.045"/>
+<circle id="ball2" fill="#5E4EFB" cx="101.124" cy="85.622" r="9.045"/>
+<circle id="ball1" fill="#5E4EFB" cx="85.547" cy="85.622" r="14.634"/>
+<g id="face-mask">
+<g>
+<path fill="#FFFFFF" d="M120.641,58.799c-0.099,15.495-0.72,35.229-2.248,37.999c-2.338,4.23-20.403,21.247-34.196,21.281
+c-13.704,0.035-33.198-17.756-34.861-22.706c-1.286-3.816-1.681-23.418-1.736-36.566c5.287,6.358,19.494,10.781,36.624,10.738
+C101.192,69.502,115.273,65.096,120.641,58.799z"/>
+</g>
+</g>
+<g id="face-details">
+<rect x="78.31" y="105" transform="matrix(-1 0.0026 -0.0026 -1 168.8972 212.7812)" width="12" height="3"/>
+<circle cx="61.334" cy="83.999" r="2.4"/>
+<circle cx="105.334" cy="83.873" r="2.4"/>
+<polygon points="84.29,96.998 75.946,97.02 84.244,79.733 84.263,86.734 80.642,94.007 84.282,93.998 	"/>
+</g>
+<g>
+<path d="M84.232,69.545c37.601,0,42.834-16.684,42.834-21.953c0-0.179-0.019-0.356-0.03-0.534l-1.976-1.5
+c0.014,0.178,0.034,0.355,0.034,0.534c0,9.094-18.409,18.731-40.969,18.731s-40.727-9.637-40.727-18.731
+c0-0.179,0.019-0.356,0.034-0.534l-2.031,1.5c-0.011,0.178-0.03,0.355-0.03,0.534C41.371,47.592,46.631,69.545,84.232,69.545z"/>
+<path d="M127.066,47.592"/>
+</g>
+</svg>
 
-        <div style="background-color: red">
-        <img src = "https://s-media-cache-ak0.pinimg.com/originals/1e/41/1e/1e411e82517e1ae1819505d949dcaee6.jpg"> </img>
-       
-        <img src = "https://vetstreet.brightspotcdn.com/dims4/default/7e62e8d/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fb1%2F90f3c0a7de11e0a0d50050568d634f%2Ffile%2FBichon-Frise-5-645mk070411.jpg"> </img>
-        </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BwxxMQtuBUo" frameborder="0" allowfullscreen></iframe>
+<div id="loader"></div>
 
-        </div>
-        <style type="text/css">body, a:hover {cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.ani), url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.png), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2014/03/15/rainbow-pinwheel-pointer.html" target="_blank" title="Rainbow Pinwheel Pointer"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Rainbow Pinwheel Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
-    </body>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>Some text in my newly loaded page..</p>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
 </html>
