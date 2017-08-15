@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Brain Buzzer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- JQuery -->
+        <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="cdcanonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="77293013053-08plosvsivonjk133u0m63piqujsqofl.apps.googleusercontent.com">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
 <style>
 /*!
  * Start Bootstrap - Portfolio Item (http://startbootstrap.com/)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
-body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-
-.portfolio-item {
-    margin-bottom: 25px;
-}
-
-footer {
-    margin: 50px 0;
-}
 </style>
 
     <!-- Bootstrap Core CSS -->
@@ -32,15 +28,10 @@ footer {
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
-
+    <script src="assets/js/script.js"></script>
 
 </head>
 <body>
-
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
-</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-light navbar-fixed-top" role="navigation" style="background-color: #e3f2fd;">
@@ -61,14 +52,30 @@ footer {
                         <img src="transp.png" width="50" height="50" class="d-inline-block fixed-top" alt="">
                     </li>
                     <li>
-                        <a href="index2.html">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="index.html">Products</a>
+                        <a href="shop.html">Products</a>
                     </li>
                     <li>
                         <a href="#">F.A.Q</a>
                     </li>
+                    <li>
+                        <a href = "signup.html">Sign Up/Log in</a>
+                    </li>
+                    <li>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </li>
+                    <li>
+                        <a href="index.html" onclick="signOut();">Sign out</a>
+                            <script>
+                                function signOut() {
+                                        var auth2 = gapi.auth2.getAuthInstance();
+                                        auth2.signOut().then(function () {
+                                        console.log('User signed out.');
+                                        });
+                                        }
+                            </script>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -81,9 +88,9 @@ footer {
 
         <!-- Portfolio Item Heading -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Item Subheading</small>
+            <div class="col-lg-12"> 
+                <h1 class="page-header">The Brain Buzzer
+                    <small></small>
                 </h1>
             </div>
         </div>
@@ -93,25 +100,25 @@ footer {
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                <img class="img-responsive" src="product.png" alt="">
             </div>
 
             <div class="col-md-4">
-                <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+                <h3>The Product</h3>
+                <p>The Brain Buzzer is an alarm clock with multiple snooze buttons. It has boxy cube shape, changing color scheme, many inverted snooze buttons located along the sides and back of the alarm clock, a different one being activated every day.</p>
                 <h3>Project Details</h3>
                 <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
+                    <li>Varying Colors</li>
+                    <li>Free Shipping</li>
+                    <li>Easy to use</li>
+                    <li>Managable and accesible</li>
                 </ul>
             </div>
 
         </div>
         <!-- /.row -->
 
-        <!-- Related Projects Row -->
+         <!--Related Projects Row 
         <div class="row">
 
             <div class="col-lg-12">
@@ -142,7 +149,7 @@ footer {
                 </a>
             </div>
 
-        </div>
+        </div>-->
         <!-- /.row -->
 
         <hr>
@@ -151,7 +158,11 @@ footer {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>
+                        <a href="#">Contact	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;</a>
+                        
+                        <a href="file:///C:/Users/ASC%20Guest/Downloads/Business%20Plan%20Phase%20III.pdf">Business Plan</a>
+                    </p>
                 </div>
             </div>
             <!-- /.row -->
