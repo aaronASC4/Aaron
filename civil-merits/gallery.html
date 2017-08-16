@@ -21,16 +21,6 @@
         Author: BootstrapMade
         Author URL: https://bootstrapmade.com
     ======================================================= -->
-<style>
-    video {
-      object-fit: cover;
-    }
-    @media (min-width: 1000px) {
-      video {
-        height: 480px;
-      }
-    }
-  </style>
   </head>
   <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -62,6 +52,28 @@
 	<div class="breadcrumb">
 		<h2>Gallery</h2>
 	</div>
+<style>
+a#downloadLink {
+	display: block;
+	margin: 0 0 1em 0;
+	min-height: 1.2em;
+}
+p#data {
+	min-height: 6em;
+}
+</style>
+<body>
+<div id="container">
+<div style = "text-align:center;">
+	<h1>Media Recorder API Demo </h1>
+	<h2>Record a 640x480 video using the media recorder API implemented in Firefox and Chrome</h2>
+	<video controls autoplay></video><br>
+	<button id="rec" onclick="onBtnRecordClicked()">Record</button>
+	<button id="pauseRes"   onclick="onPauseResumeClicked()" disabled>Pause</button>
+	<button id="stop"  onclick="onBtnStopClicked()" disabled>Stop</button>
+ </div>
+<a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
+<p id="data"></p>
 
   <div id="container">
 

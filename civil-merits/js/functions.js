@@ -124,76 +124,64 @@
       }
 'use strict';
 
-var vgaButton = document.querySelector('button#vga');
-var qvgaButton = document.querySelector('button#qvga');
-var hdButton = document.querySelector('button#hd');
-var dimensions = document.querySelector('p#dimensions');
-var video = document.querySelector('video');
+var videoElement = document.querySelector('video');
+var audioSelect = document.querySelector('select#audioSource');
+var videoSelect = document.querySelector('select#videoSource');
 
-navigator.getUserMedia = navigator.getUserMedia ||
-  navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+navigator.mediaDevices.enumerateDevices()
+  .then(gotDevices).then(getStream).catch(handleError);
 
-function successCallback(stream) {
-  window.stream = stream; // stream available to console
-  video.src = window.URL.createObjectURL(stream);
-}
+audioSelect.onchange = getStream;
+videoSelect.onchange = getStream;
 
-function errorCallback(error) {
-  console.log('navigator.getUserMedia error: ', error);
-}
-
-function displayVideoDimensions() {
-  dimensions.textContent = 'Actual video dimensions: ' + video.videoWidth +
-    'x' + video.videoHeight + 'px.';
-}
-
-video.addEventListener('play', function() {
-  setTimeout(function() {
-    displayVideoDimensions();
-  }, 500);
-});
-
-var qvgaConstraints = {
-  video: {
-    mandatory: {
-      maxWidth: 320,
-      maxHeight: 180
+function gotDevices(deviceInfos) {
+  for (var i = 0; i !== deviceInfos.length; ++i) {
+    var deviceInfo = deviceInfos[i];
+    var option = document.createElement('option');
+    option.value = deviceInfo.deviceId;
+    if (deviceInfo.kind === 'audioinput') {
+      option.text = deviceInfo.label ||
+        'microphone ' + (audioSelect.length + 1);
+      audioSelect.appendChild(option);
+    } else if (deviceInfo.kind === 'videoinput') {
+      option.text = deviceInfo.label || 'camera ' +
+        (videoSelect.length + 1);
+      videoSelect.appendChild(option);
+    } else {
+      console.log('Found ome other kind of source/device: ', deviceInfo);
     }
   }
-};
+}
 
-var vgaConstraints = {
-  video: {
-    mandatory: {
-      maxWidth: 640,
-      maxHeight: 360
-    }
-  }
-};
-
-var hdConstraints = {
-  video: {
-    mandatory: {
-      minWidth: 1280,
-      minHeight: 720
-    }
-  }
-};
-
-qvgaButton.onclick = function() {
-  getMedia(qvgaConstraints);
-};
-vgaButton.onclick = function() {
-  getMedia(vgaConstraints);
-};
-hdButton.onclick = function() {
-  getMedia(hdConstraints);
-};
-
-function getMedia(constraints) {
+function getStream() {
   if (window.stream) {
-    video.src = null;
-    window.stream.getVideoTracks()[0].stop();
+    window.stream.getTracks().forEach(function(track) {
+      track.stop();
+    });
   }
-  navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+  var constraints = {
+    audio: {
+      optional: [{
+        sourceId: audioSelect.value
+      }]
+    },
+    video: {
+      optional: [{
+        sourceId: videoSelect.value
+      }]
+    }
+  };
+
+  navigator.mediaDevices.getUserMedia(constraints).
+    then(gotStream).catch(handleError);
+}
+
+function gotStream(stream) {
+  window.stream = stream; // make stream available to console
+  videoElement.srcObject = stream;
+}
+
+function handleError(error) {
+  console.log('Error: ', error);
 }
