@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
 	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 	<link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
     <!-- =======================================================
         Theme Name: MeFamily
         Theme URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
@@ -61,7 +62,18 @@
 	<div class="breadcrumb">
 		<h2>Gallery</h2>
 	</div>
-	
+
+  <div id="container">
+
+    <div class="highlight">
+
+    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">WebRTC samples</a> <span>getUserMedia</span></h1>
+
+    <video id="gum-local" autoplay></video>
+
+    <div id="errorMsg"></div>
+  </div>
+
 	<footer>
 		<div class="inner-footer">
 			<div class="container">
@@ -106,7 +118,7 @@
                             -->
                             <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
-					</div>					
+					</div>
 				
 		
 					<ul class="social-network">
@@ -118,7 +130,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</footer>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -132,6 +144,11 @@
 	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
 	<script src="js/functions.js"></script>
 	<script>wow = new WOW({}).init();</script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="lib/ga.js"></script>
     
 </body>
 </html>
